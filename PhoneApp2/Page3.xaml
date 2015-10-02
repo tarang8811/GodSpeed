@@ -1,0 +1,68 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp2.Page3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28"/>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Margin="12,10,12,0" Grid.RowSpan="2" Background="#FF236666">
+            <TextBlock   HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="618" Width="436" FontFamily="Comic Sans MS" FontSize="25">
+        		<Span>
+        			<Run Text="1. All these will be running simultaneously. Time to gear up and show your multi-tasking capabilities and time management skills."/>
+        		</Span>
+        		<LineBreak/>
+        		<Span>
+        			<Run Text="2. 1"/>
+        		</Span>
+        		<Span>
+        			<Run Text="st"/>
+        		</Span>
+        		<Span>
+        			<Run Text=" game (upside left) is mathematical. Player needs to select either 'yes' or 'no'. If the correct answer appears in green, the answer is a yes! "/>
+        		</Span>
+        		<LineBreak/>
+        		<Span>
+        			<Run Text="3. 2"/>
+        		</Span>
+        		<Span>
+        			<Run Text="nd"/>
+        		</Span>
+        		<Span>
+        			<Run Text=" game (upside right) is an aptitude test. Here, U need to calculate the number of triangles."/>
+        		</Span>
+        		<LineBreak/>
+        		<Span>
+        			<Run Text="4. In 3"/>
+        		</Span>
+        		<Span>
+        			<Run Text="rd"/>
+        		</Span>
+        		<Span>
+        			<Run Text=" game, match the background and color shown.  "/>
+        		</Span>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="159,32,0,0" TextWrapping="Wrap" Text="Rules" VerticalAlignment="Top" Width="154" Height="74" FontSize="40" FontWeight="Bold" FontFamily="Comic Sans MS" Foreground="#FF35F961"/>
+            <Button Content="Back" HorizontalAlignment="Left" Margin="159,646,0,0" VerticalAlignment="Top" Width="166" Height="87" Foreground="#FF35F961" Background="#FF29B27A" FontSize="40" FontFamily="Comic Sans MS" FontWeight="Bold" Click="Button_Click"/>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

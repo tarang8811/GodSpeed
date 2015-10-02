@@ -1,0 +1,53 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <Grid x:Name="LayoutRoot" Margin="1,-1,0,0" Height="768" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="290*"/>
+            <ColumnDefinition Width="189*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="455*"/>
+            <RowDefinition Height="313*"/>
+        </Grid.RowDefinitions>
+        <!--<Button x:Name="button" Content="Green" Loaded ="StartTimer" Background="Green" Click="button_Click" Margin="0,415,0,0" Hold="button_Hold"/>-->
+
+        <TextBlock x:Name="myTextBlock" HorizontalAlignment="Left" Margin="116,10,0,0" TextWrapping="Wrap" Text="Score: 0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="46" Width="139" FontFamily="Comic Sans MS" FontSize="25" FontWeight="Bold"/>
+        <!--<Button  Content="Button" HorizontalAlignment="Left" Margin="217,279,0,0" VerticalAlignment="Top"/>-->
+
+
+        <Grid Background="#FF005881" HorizontalAlignment="Left" Height="395" Margin="6,61,0,0" VerticalAlignment="Top" Width="212" Grid.RowSpan="2">
+            <TextBlock Loaded="game1Timer" x:Name="game1" Margin="0,-59,133,400" FontWeight="Bold" FontSize="30" />
+            <TextBlock Loaded="mathTimer" x:Name="myTextBlock1" Height="56" VerticalAlignment="Bottom" Margin="0,-59,146,398" />
+            <TextBlock Loaded="imageTimer" x:Name="game2" Margin="392,-59,-254,400" FontSize="35" FontWeight="Bold" />
+         </Grid>
+        <TextBlock x:Name="numbers" HorizontalAlignment="Left" Margin="49,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Height="47" FontSize="40" FontWeight="Bold"/>
+
+        <TextBlock x:Name="option1" HorizontalAlignment="Left" Margin="140,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.199" FontSize="35" Height="70" Width="70" FontWeight="Bold"/>
+        <TextBlock x:Name="option2" HorizontalAlignment="Left" Margin="23,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.362,0.088" FontSize="35" Height="70" Width="93" FontWeight="Bold"/>
+        <Button x:Name="yes" Content="Yes" HorizontalAlignment="Left" Margin="10,328,0,0" VerticalAlignment="Top" Click="yes_Click" FontFamily="Comic Sans MS" FontWeight="Bold" Height="85" Width="106" Background="#FF507C91" BorderThickness="0"/>
+        <Button x:Name="no" Content="No" HorizontalAlignment="Left" Margin="116,328,0,0" VerticalAlignment="Top" Click="no_Click" FontFamily="Comic Sans MS" FontWeight="Bold" Height="85" Width="106" Background="#FF507C91" BorderThickness="0"/>
+        <Grid x:Name="button" Loaded="StartTimer" Tap ="button_Tap" Background="#FF045704" HorizontalAlignment="Left" Height="278" Margin="10,25,0,0" VerticalAlignment="Top" Width="459" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="ColorName" Tap="Tap_TextBlock" HorizontalAlignment="Left" Margin="140,108,0,0" TextWrapping="Wrap" Text="Red" VerticalAlignment="Top" Height="113" Width="316" FontSize="80" FontFamily="Comic Sans MS" FontWeight="Bold" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Image x:Name="Image" Source="Assets/Untitled3.png" Loaded="StartTimer1" Height="189" Margin="227,61,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+
+
+        <RadioButton x:Name="Button1" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,255,0,0" Height="73" Width="217" Click="RadioButton_Click" Background="Black" FontSize="22.667" BorderBrush="White" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="Button2" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,402,0,0" Height="73" Width="204" Click="Button2_Click" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="Button3" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,328,0,0" Height="74" Width="204" Click="Button3_Click" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="noOfLives" HorizontalAlignment="Left" Margin="269,8,0,0" TextWrapping="Wrap" Text="lives: 5" VerticalAlignment="Top" Width="120" Height="48" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="25" Grid.ColumnSpan="2"/>
+
+        <!--LayoutRoot is the root grid where all page content is placed-->
+    </Grid>
+</phone:PhoneApplicationPage>
